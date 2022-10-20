@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/back8"
-    tools:context=".activity_Myinfo">
+    tools:context=".activity_Course_transcripts">
 
     <LinearLayout
         android:layout_width="409dp"
@@ -15,20 +15,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <TextView
-            android:id="@+id/textView_tmyinfo"
+            android:id="@+id/textView_courseOption"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:text="基本信息"
+            android:text="选择课程"
             android:textAlignment="center"
             android:textSize="25sp"
             app:layout_constraintTop_toTopOf="parent" />
-
-
         <ListView
-            android:id="@+id/listView_tmyinfo"
+            android:id="@+id/listView_allCourse"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
@@ -39,3 +36,5 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

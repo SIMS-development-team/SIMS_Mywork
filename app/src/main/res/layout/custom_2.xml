@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/back8"
-    tools:context=".activity_Myinfo">
+    tools:context=".activity_add">
+
 
     <LinearLayout
         android:layout_width="409dp"
@@ -17,21 +18,25 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView_tmyinfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:text="基本信息"
-            android:textAlignment="center"
-            android:textSize="25sp"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
+            android:text="设置选课及分数"
+            android:layout_gravity="center_horizontal"/>
         <ListView
-            android:id="@+id/listView_tmyinfo"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="500dp"
 
+            android:id="@+id/lv_grade"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_sure"
+            android:text="确定"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_cancel"
+            android:text="取消"/>
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -39,3 +44,4 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+

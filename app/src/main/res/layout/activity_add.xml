@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/back8"
-    tools:context=".activity_Myinfo">
+    tools:context=".activity_add">
+
 
     <LinearLayout
         android:layout_width="409dp"
@@ -16,21 +17,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textView_tmyinfo"
+        <View
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:text="基本信息"
-            android:textAlignment="center"
-            android:textSize="25sp"
-            app:layout_constraintTop_toTopOf="parent" />
-
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:visibility="gone" />
 
         <ListView
-            android:id="@+id/listView_tmyinfo"
+            android:id="@+id/listView_info"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="为其设置选课及成绩"
+            android:id="@+id/btn_all" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="确定添加"
+            android:id="@+id/btn_sureADD"/>
+
+
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

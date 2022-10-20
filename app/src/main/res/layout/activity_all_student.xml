@@ -5,18 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/back8"
-    tools:context=".activity_Mytranscripts">
+    tools:context=".activity_allStudent">
 
-
-
-
-
-    <ListView
-        android:id="@+id/listView"
+    <LinearLayout
         android:layout_width="409dp"
-        android:layout_height="591dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ListView
+            android:id="@+id/listView_studentlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

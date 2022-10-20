@@ -21,7 +21,7 @@ import android.content.res.*;
 //这是个为数据库操作而写得自定义类
 //目前数据库包括两个表，一个是账户表，一个是成绩表
 public class DBHelper extends SQLiteOpenHelper {
-    //private Context context;
+    private Context context;
     public static final String TB_NAME_1 = "Saccount";//表名
     public static final String TB_NAME_2 = "Stranscripts";
     public static final String TB_NAME_3 = "Spersonal_info";

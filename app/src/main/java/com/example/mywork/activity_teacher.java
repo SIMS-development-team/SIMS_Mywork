@@ -43,9 +43,12 @@ public class activity_teacher extends AppCompatActivity implements View.OnClickL
         Button bt_course = findViewById(R.id.bt_tcourseinf);
         Button bt_transcript = findViewById(R.id.bt_transcripts);
         Button bt_mycourse = findViewById(R.id.bt_tMycourse);
+        Button bt_SIM = findViewById(R.id.bt_sim);
         bt_myinfo.setOnClickListener(this);
         bt_mycourse.setOnClickListener(this);
         bt_course.setOnClickListener(this);
+        bt_transcript.setOnClickListener(this);
+        bt_SIM .setOnClickListener(this);
 
     }
 
@@ -66,6 +69,17 @@ public class activity_teacher extends AppCompatActivity implements View.OnClickL
             case R.id.bt_tcourseinf:
                 intent = new Intent(getApplicationContext(),activity_courseinfo.class);
                 startActivity(intent);
+                break;
+            case R.id.bt_transcripts:
+                Toast.makeText(this,"按课程查询成绩",Toast.LENGTH_SHORT).show();
+                intent = new Intent(getApplicationContext(),activity_Course_transcripts.class);
+                intent.putExtra("T_id",Tid);
+                startActivity(intent);
+                break;
+            case R.id.bt_sim:
+                intent = new Intent(getApplicationContext(),activity_operateOption.class);
+                startActivity(intent);
+                break;
             default:break;
         }
     }

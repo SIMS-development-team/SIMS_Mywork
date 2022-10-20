@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/back1"
+    android:background="@mipmap/back8"
     tools:context=".student_activity">
 
     <Button
@@ -83,4 +83,14 @@
         android:text="老师"
         app:layout_constraintStart_toEndOf="@+id/editText_teacher_name"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_sim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="学生信息管理"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_transcripts" />
 </androidx.constraintlayout.widget.ConstraintLayout>

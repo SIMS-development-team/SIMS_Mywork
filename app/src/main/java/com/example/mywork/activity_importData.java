@@ -23,11 +23,7 @@ public class activity_importData extends AppCompatActivity {
     //private DBHelper dbHelper;
     //public   String[] course  = new String[100];
     //public static  int N = 0;
-    public static final String[] course = {"高等数学", "线性代数","大学物理","离散数学",
-            "数据结构", "计算机组成原理","算法分析与设计","概率论与数理统计",
-            "java程序设计","羽毛球","网球","乒乓球",
-            "飞盘","AI视觉概论","单片机原理及接口技术","通信原理C"};
-    public static final int N = 16;
+    public static  String[] course = {null} ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +34,7 @@ public class activity_importData extends AppCompatActivity {
         myDAO = new MyDAO(this);
         //dbHelper = new DBHelper(this, "info_System.db",null, 24);   //打开数据库
         myDb = myDAO.get_Db();
-
+        course = myDAO.getCoursename();   //获得课程名称列表
 
         myDb.execSQL("DELETE FROM " + "Saccount");
         myDb.execSQL("DELETE FROM " + "Stranscripts");
@@ -119,7 +115,7 @@ public class activity_importData extends AppCompatActivity {
                 String arr[] = str.split(" ");
                 ContentValues values = new ContentValues();
                 values.put("学号",arr[0]);values.put("姓名",arr[1]);
-                for(int i=0;i<N;i++)
+                for(int i=0;i<course.length;i++)
                     values.put(course[i],arr[i+2]);
                 Db.insert("Stranscripts",null,values);
 
@@ -168,7 +164,7 @@ public class activity_importData extends AppCompatActivity {
                 String arr[] = str.split(" ");
                 ContentValues values = new ContentValues();
                 values.put("学号",arr[0]);values.put("姓名",arr[1]);
-                for(int i=0;i<N;i++)
+                for(int i=0;i< course.length;i++)
                 {
                     if(arr[i+2].equals("1"))
                         values.put(course[i],"已选");

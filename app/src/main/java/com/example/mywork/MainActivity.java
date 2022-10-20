@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity  {
 
         Button bt_login =(Button)findViewById(R.id.button_login);   //找到按钮
         Button bt_importData = (Button)findViewById(R.id.bt_import);
+        //bt_importData.setVisibility(View.INVISIBLE);
         et_id = (EditText) findViewById(R.id.editText_account_name); //找到文本编辑框
         et_password = (EditText) findViewById(R.id.editText_account_password);
 
